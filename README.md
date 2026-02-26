@@ -11,7 +11,8 @@ This project focuses on automating network management and enhancing security wit
 * **Automated Backups (Python):** Developed a **Python script** (`backup_network.py` using Netmiko) to perform daily configuration backups, saving running-config snapshots of each device to a centralized directory (`/backup_configs`).
 
 ## 🛠 Tech Stack
-* **Automation Tools:** * **Ansible:** Security provisioning and ACL deployment.
+* **Automation Tools:** 
+  * **Ansible:** Security provisioning and ACL deployment.
   * **Python (Netmiko):** Automated device backups.
 * **Infrastructure:** Cisco IOS.
 * **Platform:** EVE-NG, Ubuntu Server.
