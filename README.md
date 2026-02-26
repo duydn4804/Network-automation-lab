@@ -29,3 +29,17 @@ This project focuses on automating network management and enhancing security wit
 ├── python/             # Python scripts
 │   └── backup_network.py
 └── README.md           # Project documentation
+
+🚀 Quick Start
+Clone the repository:
+git clone [https://github.com/duydn4804/Network-automation-lab.git](https://github.com/duydn4804/Network-automation-lab.git)
+cd Network-automation-lab
+
+Install required Python library:
+pip install netmiko
+
+Run Ansible Playbook (Deploy Time-Based ACLs):
+ansible-playbook -i ansible/hosts.ini ansible/block_time.yml
+
+Run Python Backup Script (Fetch Configurations):
+python3 python/backup_network.py
