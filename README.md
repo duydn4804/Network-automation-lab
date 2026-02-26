@@ -1,18 +1,18 @@
 # Network Automation & Security Provisioning Lab 🚀
 
 ## 📌 Project Overview
-This project focuses on automating network management and enhancing security within a Cisco-based infrastructure. By integrating **Python** and **Ansible**, the lab moves away from manual CLI configurations to an **Infrastructure as Code (IaC)** approach, ensuring consistency, speed, and reduced human error.
+This project focuses on automating network management and enhancing security within a Cisco-based infrastructure. By integrating **Python** and **Ansible**, the lab demonstrates an **Infrastructure as Code (IaC)** approach to handle daily operations and dynamic security policies efficiently without manual CLI intervention.
 
 ## 🖼 Network Topology
 ![Topology](./Topology/Topology.png)
 
 ## ✨ Core Features
-* **Automated Configuration:** Used **Ansible Playbooks** to deploy standardized routing and switching policies across multiple devices simultaneously.
-* **Dynamic Security Enforcement:** Implemented **Time-Based ACLs** via Ansible (`block_time.yml`) to automatically restrict inter-network traffic based on scheduled business hours.
-* **Automated Backups:** Developed a **Python script** (`backup_network.py`) to perform daily configuration backups, saving snapshots of each device to a centralized directory (`/backup_configs`).
+* **Dynamic Security Enforcement (Ansible):** Implemented **Time-Based ACLs** via Ansible playbooks (`block_time.yml`) to automatically restrict inter-network traffic based on scheduled business hours.
+* **Automated Backups (Python):** Developed a **Python script** (`backup_network.py` using Netmiko) to perform daily configuration backups, saving running-config snapshots of each device to a centralized directory (`/backup_configs`).
 
 ## 🛠 Tech Stack
-* **Automation:** Ansible, Python (Netmiko).
+* **Automation Tools:** * **Ansible:** Security provisioning and ACL deployment.
+  * **Python (Netmiko):** Automated device backups.
 * **Infrastructure:** Cisco IOS.
 * **Platform:** EVE-NG, Ubuntu Server.
 
