@@ -1,0 +1,23 @@
+---
+- name: Cau hinh Time-Based ACL de chan truy cap ban dem
+  hosts: routers
+  gather_facts: no
+
+  tasks:
+    - name: Thiet lap Time-range va ACL tren Router
+      cisco.ios.ios_config:
+        lines:
+          # 1. Dinh nghia khung gio: Hang ngay tu 22h den 06h sang
+          - time-range GIO_NGHI_NGOI
+          - periodic daily 22:00 to 06:00
+          
+          # 2. Tao Access-list chan mang trai (1.0) sang mang phai (2.0)
+          - ip access-list extended Kiem_Soat_Truy_Cap
+          - deny ip 192.168.1.0 0.0.0.255 192.168.2.0 0.0.0.255 time-range GIO_NGHI_NGOI
+          - permit ip any any
+          
+          # 3. Ap dung vao cong mang LAN cua R1
+          - interface fa1/0
+          - ip access-group Kiem_Soat_Truy_Cap in
+          
+        save_when: modified
