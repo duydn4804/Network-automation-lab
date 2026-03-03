@@ -1,23 +1,23 @@
-# Network Automation & Security Provisioning Lab 🚀
+# Network Automation & Security Provisioning Lab 
 
-## 📌 Project Overview
+## Project Overview
 This project focuses on automating network management and enhancing security within a Cisco-based infrastructure. By integrating **Python** and **Ansible**, the lab demonstrates an **Infrastructure as Code (IaC)** approach to handle daily operations and dynamic security policies efficiently without manual CLI intervention.
 
-## 🖼 Network Topology
+## Network Topology
 ![Topology](./Topology/Topology.png)
 
-## ✨ Core Features
+## Core Features
 * **Dynamic Security Enforcement (Ansible):** Implemented **Time-Based ACLs** via Ansible playbooks (`block_time.yml`) to automatically restrict inter-network traffic based on scheduled business hours.
 * **Automated Backups (Python):** Developed a **Python script** (`backup_network.py` using Netmiko) to perform daily configuration backups, saving running-config snapshots of each device to a centralized directory (`/backup_configs`).
 
-## 🛠 Tech Stack
+## Tech Stack
 * **Automation Tools:** 
   * **Ansible:** Security provisioning and ACL deployment.
   * **Python (Netmiko):** Automated device backups.
 * **Infrastructure:** Cisco IOS.
 * **Platform:** EVE-NG, Ubuntu Server.
 
-## 📂 Project Structure
+## Project Structure
 ```text
 ├── Topology/           # Network diagram
 │   └── Topology.png
@@ -30,7 +30,7 @@ This project focuses on automating network management and enhancing security wit
 │   └── backup_network.py
 └── README.md           # Project documentation
 
-🚀 Quick Start
+Quick Start
 Clone the repository:
 git clone [https://github.com/duydn4804/Network-automation-lab.git](https://github.com/duydn4804/Network-automation-lab.git)
 cd Network-automation-lab
